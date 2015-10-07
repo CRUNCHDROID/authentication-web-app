@@ -1,7 +1,7 @@
 <%-- 
-    Document   : authentication
-    Created on : 6 oct. 2015, 18:54:16
-    Author     : Riad YOUSFI
+    Document   : index
+    Created on : 7 oct. 2015, 14:39:07
+    Author     : cdi420
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Customer Page!</h1>
     </body>
 </html>

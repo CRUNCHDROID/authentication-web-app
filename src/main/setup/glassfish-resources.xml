@@ -40,8 +40,8 @@
     
     <jdbc-resource 
         enabled="true" 
-        jndi-name="jdbc/authentication_db_data_source" 
+        jndi-name="jdbc/authentication_db" 
         object-type="user" 
         pool-name="authenticationPoolConnection"/>
-    
+        
 </resources>

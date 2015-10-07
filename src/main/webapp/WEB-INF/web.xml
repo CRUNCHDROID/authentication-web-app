@@ -5,7 +5,37 @@
             30
         </session-timeout>
     </session-config>
-    <welcome-file-list>
-        <welcome-file>view/index.html</welcome-file>
-    </welcome-file-list>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Admin Access</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ADMIN</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Customer Access</web-resource-name>
+            <url-pattern>/customer/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ADMIN</role-name>
+            <role-name>CUSTOMER</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>jdbcAuthenticationWebApp</realm-name>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <role-name>ADMIN</role-name>
+    </security-role>
+    <security-role>
+        <role-name>CUSTOMER</role-name>
+    </security-role>
 </web-app>
